@@ -1,0 +1,24 @@
+---
+abstract: 'ROKR PluginBundle for Dist::Zilla'
+author:
+  - 'Robert Krimen <robertkrimen@gmail.com>'
+build_requires:
+  Test::Most: 0
+configure_requires:
+  ExtUtils::MakeMaker: 6.31
+generated_by: 'Dist::Zilla version 2.101170'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: Dist-Zilla-PluginBundle-ROKR
+recommends: {}
+requires:
+  Config::Identity: 0
+  Dist::Zilla: 0
+  Dist::Zilla::Plugin::PkgVersion: 0
+  Dist::Zilla::Plugin::PodWeaver: 0
+  Dist::Zilla::PluginBundle::Basic: 0
+  File::Copy: 0
+  Moose: 0
+version: 0.0010
