@@ -10,3 +10,4 @@ lib/Dist/Zilla/Plugin/SurgicalPodWeaver.pm
 lib/Dist/Zilla/Plugin/UpdateGitHub.pm
 lib/Dist/Zilla/PluginBundle/ROKR.pm
 lib/Dist/Zilla/PluginBundle/ROKR/Basic.pm
+t/01-basic.t

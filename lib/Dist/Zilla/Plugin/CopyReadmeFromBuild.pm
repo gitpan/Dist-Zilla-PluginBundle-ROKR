@@ -1,6 +1,6 @@
 package Dist::Zilla::Plugin::CopyReadmeFromBuild;
 BEGIN {
-  $Dist::Zilla::Plugin::CopyReadmeFromBuild::VERSION = '0.0010';
+  $Dist::Zilla::Plugin::CopyReadmeFromBuild::VERSION = '0.0011';
 }
 # ABSTRACT: Copy README after building (for SCM inclusion, etc.)
 
@@ -41,7 +41,7 @@ Dist::Zilla::Plugin::CopyReadmeFromBuild - Copy README after building (for SCM i
 
 =head1 VERSION
 
-version 0.0010
+version 0.0011
 
 =head1 SYNOPSIS
 

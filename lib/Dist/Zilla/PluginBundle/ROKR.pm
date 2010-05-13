@@ -1,8 +1,8 @@
 package Dist::Zilla::PluginBundle::ROKR;
 BEGIN {
-  $Dist::Zilla::PluginBundle::ROKR::VERSION = '0.0010';
+  $Dist::Zilla::PluginBundle::ROKR::VERSION = '0.0011';
 }
-# ABSTRACT: ROKR PluginBundle for Dist::Zilla
+# ABSTRACT: A nifty little plugin bundle for Dist::Zilla
 
 
 use strict;
@@ -43,11 +43,11 @@ __END__
 
 =head1 NAME
 
-Dist::Zilla::PluginBundle::ROKR - ROKR PluginBundle for Dist::Zilla
+Dist::Zilla::PluginBundle::ROKR - A nifty little plugin bundle for Dist::Zilla
 
 =head1 VERSION
 
-version 0.0010
+version 0.0011
 
 =head1 DESCRIPTION
 

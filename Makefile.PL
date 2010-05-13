@@ -10,7 +10,7 @@ use ExtUtils::MakeMaker 6.31;
 
 my %WriteMakefileArgs = (
                        'test' => {
-                                   'TESTS' => ''
+                                   'TESTS' => 't/*.t'
                                  },
                        'NAME' => 'Dist::Zilla::PluginBundle::ROKR',
                        'DISTNAME' => 'Dist-Zilla-PluginBundle-ROKR',
@@ -21,17 +21,18 @@ my %WriteMakefileArgs = (
                        'BUILD_REQUIRES' => {
                                              'Test::Most' => '0'
                                            },
-                       'ABSTRACT' => 'ROKR PluginBundle for Dist::Zilla',
+                       'ABSTRACT' => 'A nifty little plugin bundle for Dist::Zilla',
                        'EXE_FILES' => [],
-                       'VERSION' => '0.0010',
+                       'VERSION' => '0.0011',
                        'PREREQ_PM' => {
                                         'File::Copy' => '0',
                                         'Dist::Zilla::Plugin::PodWeaver' => '0',
+                                        'Config::Identity' => '0',
+                                        'LWP::UserAgent' => '0',
                                         'Dist::Zilla::Plugin::PkgVersion' => '0',
                                         'Dist::Zilla' => '0',
-                                        'Config::Identity' => '0',
-                                        'Moose' => '0',
-                                        'Dist::Zilla::PluginBundle::Basic' => '0'
+                                        'Dist::Zilla::PluginBundle::Basic' => '0',
+                                        'Moose' => '0'
                                       },
                        'LICENSE' => 'perl'
                      );

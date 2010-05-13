@@ -1,6 +1,6 @@
 package Dist::Zilla::Plugin::UpdateGitHub;
 BEGIN {
-  $Dist::Zilla::Plugin::UpdateGitHub::VERSION = '0.0010';
+  $Dist::Zilla::Plugin::UpdateGitHub::VERSION = '0.0011';
 }
 # ABSTRACT: Update your github repository description from abstract on release
 
@@ -9,6 +9,7 @@ use Moose;
 with qw/ Dist::Zilla::Role::Releaser /;
 
 use Config::Identity::GitHub;
+use LWP::UserAgent;
 my $agent = LWP::UserAgent->new;
 
 sub update {
@@ -65,7 +66,7 @@ Dist::Zilla::Plugin::UpdateGitHub - Update your github repository description fr
 
 =head1 VERSION
 
-version 0.0010
+version 0.0011
 
 =head1 SYNOPSIS
 
