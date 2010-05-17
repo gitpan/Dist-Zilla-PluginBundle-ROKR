@@ -23,7 +23,7 @@ my %WriteMakefileArgs = (
                                            },
                        'ABSTRACT' => 'A nifty little plugin bundle for Dist::Zilla',
                        'EXE_FILES' => [],
-                       'VERSION' => '0.0011',
+                       'VERSION' => '0.0012',
                        'PREREQ_PM' => {
                                         'File::Copy' => '0',
                                         'Dist::Zilla::Plugin::PodWeaver' => '0',

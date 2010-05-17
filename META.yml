@@ -22,4 +22,4 @@ requires:
   File::Copy: 0
   LWP::UserAgent: 0
   Moose: 0
-version: 0.0011
+version: 0.0012

@@ -1,6 +1,6 @@
 package Dist::Zilla::Plugin::CopyReadmeFromBuild;
 BEGIN {
-  $Dist::Zilla::Plugin::CopyReadmeFromBuild::VERSION = '0.0011';
+  $Dist::Zilla::Plugin::CopyReadmeFromBuild::VERSION = '0.0012';
 }
 # ABSTRACT: Copy README after building (for SCM inclusion, etc.)
 
@@ -16,7 +16,7 @@ sub after_build {
 
     my $build_root = $data->{build_root};
     my $src;
-    for(qw/ README README.md README.txt README.markdown /) {
+    for(qw/ README README.md README.mkdn README.txt README.markdown /) {
         my $file = $build_root->file( $_ );
         $src = $file and last if -e $file;
     }
@@ -41,7 +41,7 @@ Dist::Zilla::Plugin::CopyReadmeFromBuild - Copy README after building (for SCM i
 
 =head1 VERSION
 
-version 0.0011
+version 0.0012
 
 =head1 SYNOPSIS
 

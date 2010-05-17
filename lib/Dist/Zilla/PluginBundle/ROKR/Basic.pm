@@ -1,8 +1,8 @@
 package Dist::Zilla::PluginBundle::ROKR::Basic;
 BEGIN {
-  $Dist::Zilla::PluginBundle::ROKR::Basic::VERSION = '0.0011';
+  $Dist::Zilla::PluginBundle::ROKR::Basic::VERSION = '0.0012';
 }
-# ABSTRACT: Am enhanced take on the @Basic plugin bundle of Dist::Zilla
+# ABSTRACT: An enhanced take on the @Basic plugin bundle of Dist::Zilla
 
 
 use Moose;
@@ -49,11 +49,11 @@ __END__
 
 =head1 NAME
 
-Dist::Zilla::PluginBundle::ROKR::Basic - Am enhanced take on the @Basic plugin bundle of Dist::Zilla
+Dist::Zilla::PluginBundle::ROKR::Basic - An enhanced take on the @Basic plugin bundle of Dist::Zilla
 
 =head1 VERSION
 
-version 0.0011
+version 0.0012
 
 =head1 SYNOPSIS
 
