@@ -1,6 +1,6 @@
 package Dist::Zilla::Plugin::SurgicalPkgVersion;
 BEGIN {
-  $Dist::Zilla::Plugin::SurgicalPkgVersion::VERSION = '0.0012';
+  $Dist::Zilla::Plugin::SurgicalPkgVersion::VERSION = '0.0013';
 }
 # ABSTRACT: Surgically apply PkgVersion
 
@@ -43,7 +43,7 @@ Dist::Zilla::Plugin::SurgicalPkgVersion - Surgically apply PkgVersion
 
 =head1 VERSION
 
-version 0.0012
+version 0.0013
 
 =head1 SYNOPSIS
 
@@ -69,7 +69,7 @@ You can forcefully disable PkgVersion on a .pm by using the C<-PkgVersion> hint
 
 =head1 AUTHOR
 
-  Robert Krimen <robertkrimen@gmail.com>
+Robert Krimen <robertkrimen@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 

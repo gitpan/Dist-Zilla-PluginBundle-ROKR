@@ -1,6 +1,6 @@
 package Dist::Zilla::PluginBundle::ROKR;
 BEGIN {
-  $Dist::Zilla::PluginBundle::ROKR::VERSION = '0.0012';
+  $Dist::Zilla::PluginBundle::ROKR::VERSION = '0.0013';
 }
 # ABSTRACT: A nifty little plugin bundle for Dist::Zilla
 
@@ -18,6 +18,7 @@ sub configure {
 
     $self->add_bundle('@ROKR::Basic');
     $self->add_plugins('UpdateGitHub');
+    $self->add_plugins('Git::Tag');
 }
 
 sub parse_hint {
@@ -47,7 +48,7 @@ Dist::Zilla::PluginBundle::ROKR - A nifty little plugin bundle for Dist::Zilla
 
 =head1 VERSION
 
-version 0.0012
+version 0.0013
 
 =head1 DESCRIPTION
 
@@ -73,7 +74,7 @@ C<UpdateGitHub> - L<Dist::Zilla::Plugin::UpdateGitHub>
 
 =head1 AUTHOR
 
-  Robert Krimen <robertkrimen@gmail.com>
+Robert Krimen <robertkrimen@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 

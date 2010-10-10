@@ -1,6 +1,6 @@
 package Dist::Zilla::PluginBundle::ROKR::Basic;
 BEGIN {
-  $Dist::Zilla::PluginBundle::ROKR::Basic::VERSION = '0.0012';
+  $Dist::Zilla::PluginBundle::ROKR::Basic::VERSION = '0.0013';
 }
 # ABSTRACT: An enhanced take on the @Basic plugin bundle of Dist::Zilla
 
@@ -53,7 +53,7 @@ Dist::Zilla::PluginBundle::ROKR::Basic - An enhanced take on the @Basic plugin b
 
 =head1 VERSION
 
-version 0.0012
+version 0.0013
 
 =head1 SYNOPSIS
 
@@ -96,7 +96,7 @@ L<Dist::Zilla::Plugin::SurgicalPodWeaver>
 
 =head1 AUTHOR
 
-  Robert Krimen <robertkrimen@gmail.com>
+Robert Krimen <robertkrimen@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 

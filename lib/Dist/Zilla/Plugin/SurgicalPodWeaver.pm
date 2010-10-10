@@ -1,6 +1,6 @@
 package Dist::Zilla::Plugin::SurgicalPodWeaver;
 BEGIN {
-  $Dist::Zilla::Plugin::SurgicalPodWeaver::VERSION = '0.0012';
+  $Dist::Zilla::Plugin::SurgicalPodWeaver::VERSION = '0.0013';
 }
 # ABSTRACT: Surgically apply PodWeaver
 
@@ -44,7 +44,7 @@ Dist::Zilla::Plugin::SurgicalPodWeaver - Surgically apply PodWeaver
 
 =head1 VERSION
 
-version 0.0012
+version 0.0013
 
 =head1 SYNOPSIS
 
@@ -70,7 +70,7 @@ You can forcefully disable PodWeaver on a .pm by using the C<-PodWeaver> hint
 
 =head1 AUTHOR
 
-  Robert Krimen <robertkrimen@gmail.com>
+Robert Krimen <robertkrimen@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 

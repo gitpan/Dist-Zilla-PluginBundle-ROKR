@@ -1,8 +1,8 @@
-package Dist::Zilla::Plugin::CopyReadmeFromBuild;
+package Dist::Zilla::Plugin::CopyMakefilePLFromBuild;
 BEGIN {
-  $Dist::Zilla::Plugin::CopyReadmeFromBuild::VERSION = '0.0013';
+  $Dist::Zilla::Plugin::CopyMakefilePLFromBuild::VERSION = '0.0013';
 }
-# ABSTRACT: Copy README after building (for SCM inclusion, etc.)
+# ABSTRACT: Copy Makefile.PL after building (for SCM inclusion, etc.)
 
 
 use Moose;
@@ -16,12 +16,12 @@ sub after_build {
 
     my $build_root = $data->{build_root};
     my $src;
-    for(qw/ README README.md README.mkdn README.txt README.markdown /) {
+    for(qw/ Makefile.PL /) {
         my $file = $build_root->file( $_ );
         $src = $file and last if -e $file;
     }
 
-    die "Missing README file in ", $build_root unless $src;
+    die "Missing Makefile.PL file in ", $build_root unless $src;
 
     my $dest = $self->zilla->root->file( $src->basename );
 
@@ -37,7 +37,7 @@ __END__
 
 =head1 NAME
 
-Dist::Zilla::Plugin::CopyReadmeFromBuild - Copy README after building (for SCM inclusion, etc.)
+Dist::Zilla::Plugin::CopyMakefilePLFromBuild - Copy Makefile.PL after building (for SCM inclusion, etc.)
 
 =head1 VERSION
 
@@ -47,17 +47,17 @@ version 0.0013
 
 In your L<Dist::Zilla> C<dist.ini>:
 
-    [CopyReadmeFromBuild]
+    [CopyMakefilePLFromBuild]
 
 =head1 DESCRIPTION
 
-CopyReadmeFromBuild will automatically copy the README from the build directory into the distribution directoory. This is so you can commit the README to version control. GitHub, for example, likes to see a README
+CopyMakefilePLFromBuild will automatically copy the Makefile.PL from the build directory into the distribution directory. This is so you can commit the Makefile.PL to version control. When building directly from GitHub (via cpanm, for example) you would need a Makefile.PL
 
-Dist::Zilla::Plugin::Readme will not like it if you already have a README, so you'll have to disable that plugin, an example of which is:
+Dist::Zilla will not like it if you already have a Makefile.PL, so you'll have to disable that plugin, an example of which is:
 
     [@Filter]
     bundle = @Basic
-    remove = Readme
+    remove = MakefilePL
 
 =head1 AUTHOR
 

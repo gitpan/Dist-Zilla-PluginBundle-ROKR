@@ -1,6 +1,6 @@
 package Dist::Zilla::Plugin::DynamicManifest;
 BEGIN {
-  $Dist::Zilla::Plugin::DynamicManifest::VERSION = '0.0012';
+  $Dist::Zilla::Plugin::DynamicManifest::VERSION = '0.0013';
 }
 # ABSTRACT: Dynamically build a sane MANIFEST
 
@@ -60,7 +60,7 @@ Dist::Zilla::Plugin::DynamicManifest - Dynamically build a sane MANIFEST
 
 =head1 VERSION
 
-version 0.0012
+version 0.0013
 
 =head1 SYNOPSIS
 
@@ -91,7 +91,7 @@ In essence, DynamicManifest is a built-in MANIFEST.SKIP that will prune everythi
 
 =head1 AUTHOR
 
-  Robert Krimen <robertkrimen@gmail.com>
+Robert Krimen <robertkrimen@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 

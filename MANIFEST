@@ -3,6 +3,7 @@ MANIFEST
 META.yml
 Makefile.PL
 README
+lib/Dist/Zilla/Plugin/CopyMakefilePLFromBuild.pm
 lib/Dist/Zilla/Plugin/CopyReadmeFromBuild.pm
 lib/Dist/Zilla/Plugin/DynamicManifest.pm
 lib/Dist/Zilla/Plugin/SurgicalPkgVersion.pm

@@ -1,6 +1,6 @@
 package Dist::Zilla::Plugin::UpdateGitHub;
 BEGIN {
-  $Dist::Zilla::Plugin::UpdateGitHub::VERSION = '0.0012';
+  $Dist::Zilla::Plugin::UpdateGitHub::VERSION = '0.0013';
 }
 # ABSTRACT: Update your github repository description from abstract on release
 
@@ -66,7 +66,7 @@ Dist::Zilla::Plugin::UpdateGitHub - Update your github repository description fr
 
 =head1 VERSION
 
-version 0.0012
+version 0.0013
 
 =head1 SYNOPSIS
 
@@ -95,7 +95,7 @@ L<Config::Identity>
 
 =head1 AUTHOR
 
-  Robert Krimen <robertkrimen@gmail.com>
+Robert Krimen <robertkrimen@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 
