@@ -1,6 +1,6 @@
 package Dist::Zilla::PluginBundle::ROKR::Basic;
 BEGIN {
-  $Dist::Zilla::PluginBundle::ROKR::Basic::VERSION = '0.0013';
+  $Dist::Zilla::PluginBundle::ROKR::Basic::VERSION = '0.0014';
 }
 # ABSTRACT: An enhanced take on the @Basic plugin bundle of Dist::Zilla
 
@@ -28,13 +28,14 @@ sub bundle_config {
 
     push @bundle, map {
         my ( $name, $payload ) = @$_;
-        [ "$section->{name}/$name" => "Dist::Zilla::Plugin::$name" => $payload ];
+        [ "$section->{name}/$name" => "Dist::Zilla::Plugin::$name" => $payload || {} ];
     } (
         [ 'CopyReadmeFromBuild' ],
         [ 'DynamicManifest' ],
         [ 'ReadmeFromPod' ],
         [ 'SurgicalPkgVersion' ],
         [ 'SurgicalPodWeaver' ],
+#        [ 'PodWeaver' ],
     );
 
     return @bundle;
@@ -53,7 +54,7 @@ Dist::Zilla::PluginBundle::ROKR::Basic - An enhanced take on the @Basic plugin b
 
 =head1 VERSION
 
-version 0.0013
+version 0.0014
 
 =head1 SYNOPSIS
 

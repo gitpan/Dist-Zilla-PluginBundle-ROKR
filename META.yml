@@ -23,4 +23,4 @@ requires:
   Dist::Zilla::PluginBundle::Basic: 0
   File::Copy: 0
   LWP::UserAgent: 0
-version: 0.0013
+version: 0.0014

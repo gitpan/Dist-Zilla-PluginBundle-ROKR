@@ -1,6 +1,6 @@
 package Dist::Zilla::PluginBundle::ROKR;
 BEGIN {
-  $Dist::Zilla::PluginBundle::ROKR::VERSION = '0.0013';
+  $Dist::Zilla::PluginBundle::ROKR::VERSION = '0.0014';
 }
 # ABSTRACT: A nifty little plugin bundle for Dist::Zilla
 
@@ -48,7 +48,7 @@ Dist::Zilla::PluginBundle::ROKR - A nifty little plugin bundle for Dist::Zilla
 
 =head1 VERSION
 
-version 0.0013
+version 0.0014
 
 =head1 DESCRIPTION
 
