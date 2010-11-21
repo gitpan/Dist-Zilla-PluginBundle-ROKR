@@ -1,6 +1,6 @@
 package Dist::Zilla::Plugin::UpdateGitHub;
 BEGIN {
-  $Dist::Zilla::Plugin::UpdateGitHub::VERSION = '0.0014';
+  $Dist::Zilla::Plugin::UpdateGitHub::VERSION = '0.0015';
 }
 # ABSTRACT: Update your github repository description from abstract on release
 
@@ -26,6 +26,12 @@ sub update {
         my %identity = Config::Identity::GitHub->load;
         ( $login, $token ) = @identity{qw/ login token /};
     }
+    for ( $login, $token ) {
+        unless ( defined $_ and length $_ ) {
+            $self->log( 'Missing GitHub login and/or token' );
+            return;
+        }
+    }
 
     my $uri = "https://github.com/api/v2/json/repos/show/$login/$repository";
     my $response = $agent->post( $uri,
@@ -46,9 +52,9 @@ sub release {
     my $description = $self->zilla->abstract;
 
     eval {
-        my $response = $self->update( repository => $repository,
-            description => $description );
-        $self->log( "Updated github description:", $response->decoded_content );
+        if ( my $response = $self->update( repository => $repository, description => $description ) ) {
+            $self->log( "Updated github description:", $response->decoded_content );
+        }
     };
     $self->log( "Unable to update github description: $@" ) if $@;
 }
@@ -66,7 +72,7 @@ Dist::Zilla::Plugin::UpdateGitHub - Update your github repository description fr
 
 =head1 VERSION
 
-version 0.0014
+version 0.0015
 
 =head1 SYNOPSIS
 

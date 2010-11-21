@@ -27,12 +27,11 @@ my %WriteMakefileArgs = (
     'Dist::Zilla::Plugin::Git::Tag' => '0',
     'Dist::Zilla::Plugin::PkgVersion' => '0',
     'Dist::Zilla::Plugin::PodWeaver' => '0',
-    'Dist::Zilla::Plugin::UpdateGitHub' => '0',
     'Dist::Zilla::PluginBundle::Basic' => '0',
     'File::Copy' => '0',
     'LWP::UserAgent' => '0'
   },
-  'VERSION' => '0.0014',
+  'VERSION' => '0.0015',
   'test' => {
     'TESTS' => 't/*.t'
   }
