@@ -1,6 +1,6 @@
 package Dist::Zilla::Plugin::SurgicalPodWeaver;
 BEGIN {
-  $Dist::Zilla::Plugin::SurgicalPodWeaver::VERSION = '0.0015';
+  $Dist::Zilla::Plugin::SurgicalPodWeaver::VERSION = '0.0016';
 }
 # ABSTRACT: Surgically apply PodWeaver
 
@@ -44,7 +44,7 @@ Dist::Zilla::Plugin::SurgicalPodWeaver - Surgically apply PodWeaver
 
 =head1 VERSION
 
-version 0.0015
+version 0.0016
 
 =head1 SYNOPSIS
 
@@ -74,7 +74,7 @@ Robert Krimen <robertkrimen@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2010 by Robert Krimen.
+This software is copyright (c) 2011 by Robert Krimen.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

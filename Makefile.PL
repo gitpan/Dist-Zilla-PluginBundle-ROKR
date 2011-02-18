@@ -31,7 +31,7 @@ my %WriteMakefileArgs = (
     'File::Copy' => '0',
     'LWP::UserAgent' => '0'
   },
-  'VERSION' => '0.0015',
+  'VERSION' => '0.0016',
   'test' => {
     'TESTS' => 't/*.t'
   }

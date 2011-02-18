@@ -1,6 +1,6 @@
 package Dist::Zilla::PluginBundle::ROKR::Basic;
 BEGIN {
-  $Dist::Zilla::PluginBundle::ROKR::Basic::VERSION = '0.0015';
+  $Dist::Zilla::PluginBundle::ROKR::Basic::VERSION = '0.0016';
 }
 # ABSTRACT: An enhanced take on the @Basic plugin bundle of Dist::Zilla
 
@@ -54,7 +54,7 @@ Dist::Zilla::PluginBundle::ROKR::Basic - An enhanced take on the @Basic plugin b
 
 =head1 VERSION
 
-version 0.0015
+version 0.0016
 
 =head1 SYNOPSIS
 
@@ -101,7 +101,7 @@ Robert Krimen <robertkrimen@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2010 by Robert Krimen.
+This software is copyright (c) 2011 by Robert Krimen.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

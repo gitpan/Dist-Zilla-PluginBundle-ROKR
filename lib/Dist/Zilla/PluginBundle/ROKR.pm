@@ -1,6 +1,6 @@
 package Dist::Zilla::PluginBundle::ROKR;
 BEGIN {
-  $Dist::Zilla::PluginBundle::ROKR::VERSION = '0.0015';
+  $Dist::Zilla::PluginBundle::ROKR::VERSION = '0.0016';
 }
 # ABSTRACT: A nifty little plugin bundle for Dist::Zilla
 
@@ -48,7 +48,7 @@ Dist::Zilla::PluginBundle::ROKR - A nifty little plugin bundle for Dist::Zilla
 
 =head1 VERSION
 
-version 0.0015
+version 0.0016
 
 =head1 DESCRIPTION
 
@@ -78,7 +78,7 @@ Robert Krimen <robertkrimen@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2010 by Robert Krimen.
+This software is copyright (c) 2011 by Robert Krimen.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

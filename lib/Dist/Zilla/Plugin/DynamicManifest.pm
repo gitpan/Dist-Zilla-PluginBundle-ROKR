@@ -1,6 +1,6 @@
 package Dist::Zilla::Plugin::DynamicManifest;
 BEGIN {
-  $Dist::Zilla::Plugin::DynamicManifest::VERSION = '0.0015';
+  $Dist::Zilla::Plugin::DynamicManifest::VERSION = '0.0016';
 }
 # ABSTRACT: Dynamically build a sane MANIFEST
 
@@ -22,7 +22,8 @@ sub _build_pruner {
         MANIFEST$|
         Changes$|
         META\.json$|
-        META\.yml$
+        META\.yml$|
+        [^\/]+\.xs$
     )}x }
 }
 
@@ -60,7 +61,7 @@ Dist::Zilla::Plugin::DynamicManifest - Dynamically build a sane MANIFEST
 
 =head1 VERSION
 
-version 0.0015
+version 0.0016
 
 =head1 SYNOPSIS
 
@@ -86,7 +87,8 @@ In essence, DynamicManifest is a built-in MANIFEST.SKIP that will prune everythi
             MANIFEST$|
             Changes$|
             META\.json$|
-            META\.yml$
+            META\.yml$|
+            \.xs$
         )}x
 
 =head1 AUTHOR
@@ -95,7 +97,7 @@ Robert Krimen <robertkrimen@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2010 by Robert Krimen.
+This software is copyright (c) 2011 by Robert Krimen.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

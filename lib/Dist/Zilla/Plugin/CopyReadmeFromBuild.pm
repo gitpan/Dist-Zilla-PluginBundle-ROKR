@@ -1,16 +1,21 @@
 package Dist::Zilla::Plugin::CopyReadmeFromBuild;
 BEGIN {
-  $Dist::Zilla::Plugin::CopyReadmeFromBuild::VERSION = '0.0015';
+  $Dist::Zilla::Plugin::CopyReadmeFromBuild::VERSION = '0.0016';
 }
 # ABSTRACT: Copy README after building (for SCM inclusion, etc.)
 
 
 use Moose;
-with qw/ Dist::Zilla::Role::AfterBuild /;
+with 'build' eq ( $ENV{ DZIL_CopyFromBuildAfter } || 'release' ) ? 'Dist::Zilla::Role::AfterBuild' : 'Dist::Zilla::Role::AfterRelease';
 
 use File::Copy qw/ copy /;
 
 sub after_build {
+    my $self = shift;
+    return $self->after_release( @_ );
+}
+
+sub after_release {
     my $self = shift;
     my $data = shift;
 
@@ -41,7 +46,7 @@ Dist::Zilla::Plugin::CopyReadmeFromBuild - Copy README after building (for SCM i
 
 =head1 VERSION
 
-version 0.0015
+version 0.0016
 
 =head1 SYNOPSIS
 
@@ -51,13 +56,23 @@ In your L<Dist::Zilla> C<dist.ini>:
 
 =head1 DESCRIPTION
 
-CopyReadmeFromBuild will automatically copy the README from the build directory into the distribution directoory. This is so you can commit the README to version control. GitHub, for example, likes to see a README
+CopyReadmeFromBuild will automatically copy the README from the build directory
+into the distribution directory. This is so you can commit the README to version
+control. GitHub, for example, likes to see a README
 
-Dist::Zilla::Plugin::Readme will not like it if you already have a README, so you'll have to disable that plugin, an example of which is:
+Dist::Zilla::Plugin::Readme will not like it if you already have a README, so
+you'll have to disable that plugin, an example of which is:
 
     [@Filter]
     bundle = @Basic
     remove = Readme
+
+=head1 AfterBuild/AfterRelease
+
+With the release of 0.0016, this plugin changed to performing the copy during the AfterRelease stage instead of the AfterBuild stage.
+To enable the old behavior, set the environment variable DZIL_CopyFromBuildAfter to 'build':
+
+    $ DZIL_CopyFromBuildAfter=build dzil build 
 
 =head1 AUTHOR
 
@@ -65,7 +80,7 @@ Robert Krimen <robertkrimen@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2010 by Robert Krimen.
+This software is copyright (c) 2011 by Robert Krimen.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
