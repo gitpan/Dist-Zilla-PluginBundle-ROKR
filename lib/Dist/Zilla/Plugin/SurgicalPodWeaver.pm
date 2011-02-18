@@ -1,6 +1,6 @@
 package Dist::Zilla::Plugin::SurgicalPodWeaver;
 BEGIN {
-  $Dist::Zilla::Plugin::SurgicalPodWeaver::VERSION = '0.0016';
+  $Dist::Zilla::Plugin::SurgicalPodWeaver::VERSION = '0.0017';
 }
 # ABSTRACT: Surgically apply PodWeaver
 
@@ -44,7 +44,7 @@ Dist::Zilla::Plugin::SurgicalPodWeaver - Surgically apply PodWeaver
 
 =head1 VERSION
 
-version 0.0016
+version 0.0017
 
 =head1 SYNOPSIS
 

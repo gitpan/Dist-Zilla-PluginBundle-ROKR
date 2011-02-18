@@ -1,23 +1,21 @@
 package Dist::Zilla::Plugin::CopyMakefilePLFromBuild;
 BEGIN {
-  $Dist::Zilla::Plugin::CopyMakefilePLFromBuild::VERSION = '0.0016';
+  $Dist::Zilla::Plugin::CopyMakefilePLFromBuild::VERSION = '0.0017';
 }
 # ABSTRACT: Copy Makefile.PL after building (for SCM inclusion, etc.)
 
 
 use Moose;
-with 'build' eq ( $ENV{ DZIL_CopyFromBuildAfter } || 'release' ) ? 'Dist::Zilla::Role::AfterBuild' : 'Dist::Zilla::Role::AfterRelease';
+with 'Dist::Zilla::Role::AfterBuild';
 
 use File::Copy qw/ copy /;
 
 sub after_build {
     my $self = shift;
-    return $self->after_release( @_ );
-}
-
-sub after_release {
-    my $self = shift;
     my $data = shift;
+
+    if ( $ENV{ DZIL_RELEASING} || 'build' eq ( $ENV{ DZIL_CopyFromBuildAfter } || 'release' ) ) {}
+    else { return }
 
     my $build_root = $data->{build_root};
     my $src;
@@ -46,7 +44,7 @@ Dist::Zilla::Plugin::CopyMakefilePLFromBuild - Copy Makefile.PL after building (
 
 =head1 VERSION
 
-version 0.0016
+version 0.0017
 
 =head1 SYNOPSIS
 
