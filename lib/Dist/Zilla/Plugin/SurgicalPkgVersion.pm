@@ -1,6 +1,6 @@
 package Dist::Zilla::Plugin::SurgicalPkgVersion;
 BEGIN {
-  $Dist::Zilla::Plugin::SurgicalPkgVersion::VERSION = '0.0017';
+  $Dist::Zilla::Plugin::SurgicalPkgVersion::VERSION = '0.0018';
 }
 # ABSTRACT: Surgically apply PkgVersion
 
@@ -43,7 +43,7 @@ Dist::Zilla::Plugin::SurgicalPkgVersion - Surgically apply PkgVersion
 
 =head1 VERSION
 
-version 0.0017
+version 0.0018
 
 =head1 SYNOPSIS
 

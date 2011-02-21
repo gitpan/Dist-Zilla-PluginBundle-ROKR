@@ -1,6 +1,6 @@
 package Dist::Zilla::Plugin::UpdateGitHub;
 BEGIN {
-  $Dist::Zilla::Plugin::UpdateGitHub::VERSION = '0.0017';
+  $Dist::Zilla::Plugin::UpdateGitHub::VERSION = '0.0018';
 }
 # ABSTRACT: Update your github repository description from abstract on release
 
@@ -72,7 +72,7 @@ Dist::Zilla::Plugin::UpdateGitHub - Update your github repository description fr
 
 =head1 VERSION
 
-version 0.0017
+version 0.0018
 
 =head1 SYNOPSIS
 

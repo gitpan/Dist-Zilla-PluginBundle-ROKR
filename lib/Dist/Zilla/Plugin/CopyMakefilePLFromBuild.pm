@@ -1,6 +1,6 @@
 package Dist::Zilla::Plugin::CopyMakefilePLFromBuild;
 BEGIN {
-  $Dist::Zilla::Plugin::CopyMakefilePLFromBuild::VERSION = '0.0017';
+  $Dist::Zilla::Plugin::CopyMakefilePLFromBuild::VERSION = '0.0018';
 }
 # ABSTRACT: Copy Makefile.PL after building (for SCM inclusion, etc.)
 
@@ -14,7 +14,7 @@ sub after_build {
     my $self = shift;
     my $data = shift;
 
-    if ( $ENV{ DZIL_RELEASING} || 'build' eq ( $ENV{ DZIL_CopyFromBuildAfter } || 'release' ) ) {}
+    if ( $ENV{ DZIL_RELEASING} || $ENV{ DZIL_CopyFromBuildAfterBuild } ) {}
     else { return }
 
     my $build_root = $data->{build_root};
@@ -44,7 +44,7 @@ Dist::Zilla::Plugin::CopyMakefilePLFromBuild - Copy Makefile.PL after building (
 
 =head1 VERSION
 
-version 0.0017
+version 0.0018
 
 =head1 SYNOPSIS
 
@@ -71,9 +71,9 @@ you'll want to prune that file, an example of which is:
 =head1 AfterBuild/AfterRelease
 
 With the release of 0.0016, this plugin changed to performing the copy during the AfterRelease stage instead of the AfterBuild stage.
-To enable the old behavior, set the environment variable DZIL_CopyFromBuildAfter to 'build':
+To enable the old behavior, set the environment variable DZIL_CopyFromBuildAfterBuild to 1:
 
-    $ DZIL_CopyFromBuildAfter=build dzil build 
+    $ DZIL_CopyFromBuildAfterBuild=1 dzil build 
 
 =head1 AUTHOR
 

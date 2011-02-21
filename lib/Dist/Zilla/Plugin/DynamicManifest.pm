@@ -1,6 +1,6 @@
 package Dist::Zilla::Plugin::DynamicManifest;
 BEGIN {
-  $Dist::Zilla::Plugin::DynamicManifest::VERSION = '0.0017';
+  $Dist::Zilla::Plugin::DynamicManifest::VERSION = '0.0018';
 }
 # ABSTRACT: Dynamically build a sane MANIFEST
 
@@ -61,7 +61,7 @@ Dist::Zilla::Plugin::DynamicManifest - Dynamically build a sane MANIFEST
 
 =head1 VERSION
 
-version 0.0017
+version 0.0018
 
 =head1 SYNOPSIS
 
