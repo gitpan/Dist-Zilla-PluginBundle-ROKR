@@ -1,6 +1,6 @@
 package Dist::Zilla::Plugin::CopyMakefilePLFromBuild;
 BEGIN {
-  $Dist::Zilla::Plugin::CopyMakefilePLFromBuild::VERSION = '0.0018';
+  $Dist::Zilla::Plugin::CopyMakefilePLFromBuild::VERSION = '0.0019';
 }
 # ABSTRACT: Copy Makefile.PL after building (for SCM inclusion, etc.)
 
@@ -44,7 +44,7 @@ Dist::Zilla::Plugin::CopyMakefilePLFromBuild - Copy Makefile.PL after building (
 
 =head1 VERSION
 
-version 0.0018
+version 0.0019
 
 =head1 SYNOPSIS
 

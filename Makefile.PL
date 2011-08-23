@@ -4,7 +4,7 @@ use warnings;
 
 
 
-use ExtUtils::MakeMaker 6.31;
+use ExtUtils::MakeMaker 6.30;
 
 
 
@@ -15,7 +15,7 @@ my %WriteMakefileArgs = (
     'Test::Most' => '0'
   },
   'CONFIGURE_REQUIRES' => {
-    'ExtUtils::MakeMaker' => '6.31'
+    'ExtUtils::MakeMaker' => '6.30'
   },
   'DISTNAME' => 'Dist-Zilla-PluginBundle-ROKR',
   'EXE_FILES' => [],
@@ -24,6 +24,7 @@ my %WriteMakefileArgs = (
   'PREREQ_PM' => {
     'Config::Identity' => '0',
     'Dist::Zilla' => '0',
+    'Dist::Zilla::Plugin::CopyReadmeFromBuild' => '0',
     'Dist::Zilla::Plugin::Git::Tag' => '0',
     'Dist::Zilla::Plugin::PkgVersion' => '0',
     'Dist::Zilla::Plugin::PodWeaver' => '0',
@@ -31,7 +32,7 @@ my %WriteMakefileArgs = (
     'File::Copy' => '0',
     'LWP::UserAgent' => '0'
   },
-  'VERSION' => '0.0018',
+  'VERSION' => '0.0019',
   'test' => {
     'TESTS' => 't/*.t'
   }
